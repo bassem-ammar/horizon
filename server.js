@@ -8,7 +8,7 @@ const path = require("path")
 dotenv.config()
 
 const app = express()
-const PORT = process.env.PORT 
+const PORT = process.env.PORT || 80
 
 // Middleware
 app.use(
@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }))
 // MongoDB connection
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect("mongodb://localhost:27017/horizons_trade")
+    const conn = await mongoose.connect("mongodb+srv://bassdmammar:53037912@horizon.sgt9i0k.mongodb.net/?retryWrites=true&w=majority&appName=horizon")
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`)
   } catch (error) {
     console.error("❌ MongoDB connection error:", error)

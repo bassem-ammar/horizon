@@ -11,7 +11,7 @@ dotenv.config()
 const seedDatabase = async () => {
   try {
     // Connect to MongoDB
-    await mongoose.connect("mongodb://localhost:27017/horizons_trade")
+    await mongoose.connect("mongodb+srv://bassdmammar:53037912@horizon.sgt9i0k.mongodb.net/?retryWrites=true&w=majority&appName=horizon")
     console.log("✅ Connected to MongoDB")
 
     // Clear existing data
